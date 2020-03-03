@@ -2,8 +2,17 @@ import React, {useState} from 'react';
 
 const Counter = () => {
     const [counter, setCounter] = useState(0);
+    const increment = () => {
+        setCounter(counter + 1);
+    };
+
     return (
-        <div>{counter}</div>);
+        <div>
+            <div>{counter}</div>
+            <div>
+                <button onClick={increment}>Increment</button>
+            </div>
+        </div>);
 
 };
 
