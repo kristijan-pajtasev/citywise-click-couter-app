@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 
-const Counter = () => {
-    const [counter, setCounter] = useState(0);
+const Counter = (props) => {
+    const initialValue = props.initialValue ? props.initialValue : 0;
+    const [counter, setCounter] = useState(initialValue);
 
     const increment = () => {
         setCounter(counter + 1);
     };
 
     const reset = () => {
-        setCounter(0);
+        setCounter(initialValue);
     };
 
     return (
